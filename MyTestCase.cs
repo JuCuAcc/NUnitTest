@@ -34,5 +34,31 @@ namespace NUnitTest
             MyMath math = new MyMath();
             Assert.AreEqual(2, math.Div(20, 10));
         }
+
+        // Sad Path
+        [TestCase]
+        public void Add2()
+        {
+            MyMath math = new MyMath();
+            Assert.AreNotEqual(30, math.Add(20, 11));
+        }
+        [TestCase]
+        public void Sub2()
+        {
+            MyMath math = new MyMath();
+            Assert.AreNotEqual(10, math.Sub(10, 10));
+        }
+        [TestCase]
+        public void Multi2()
+        {
+            MyMath math = new MyMath();
+            Assert.AreNotEqual(22, math.Multi(20, 11));
+        }
+        [TestCase]
+        public void Div2()
+        {
+            MyMath math = new MyMath();
+            Assert.AreNotEqual(0, math.Div(10, 10));
+        }
     }
 }
